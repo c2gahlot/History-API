@@ -1,0 +1,17 @@
+.nav-center {
+    padding-left: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-center {
+        padding: 0;
+    }
+}
+
+.center-element{
+    text-align: center;
+}
+
+.phone-thumb {
+    height: 100px;
+}
