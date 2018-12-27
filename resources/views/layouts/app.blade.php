@@ -34,7 +34,7 @@
                 </a>
 
                 <div class="nav-center">
-                    <form action="{{route('review')}}" method="GET" onsubmit="onPhoneSearch()" data-pjax>
+                    <form action="{{route('review')}}" method="GET" id="searchForm" onsubmit="onPhoneSearch()" data-pjax>
                         <input type="text" placeholder="Serach ..." id="search" name="name" class="form-control">
                     </form>
                 </div>
@@ -101,6 +101,12 @@
             list: {
                 match: {
                     enabled: true
+                },
+                onSelectItemEvent: function() {
+                    $('#searchForm').submit();
+                },
+                onHideListEvent: function() {
+                    $('#searchForm').submit();
                 }
             }
         };
